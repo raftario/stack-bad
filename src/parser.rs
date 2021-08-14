@@ -11,9 +11,9 @@ pub fn parse(src: &str) -> Vec<Inst> {
         insts.push(match b {
             b's' => Inst::Sub(take::<u8, _>(b's', &mut iter) + 1),
             b't' => Inst::Right(take::<usize, _>(b't', &mut iter) + 1),
-            b'a' => Inst::Add(take::<u8, _>(b's', &mut iter) + 1),
+            b'a' => Inst::Add(take::<u8, _>(b'a', &mut iter) + 1),
             b'c' => Inst::IO,
-            b'k' => Inst::Left(take::<usize, _>(b't', &mut iter) + 1),
+            b'k' => Inst::Left(take::<usize, _>(b'k', &mut iter) + 1),
             b'b' => Inst::Start,
             b'd' => Inst::End,
             _ => continue,
