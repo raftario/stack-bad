@@ -7,7 +7,7 @@ It operates on a theoretically unbounded region of contiguous memory, representa
 - `s` - Decrement the value at the memory pointer, wrapping to 255 on underflow.
 - `t` - Increment the memory pointer, which theoretically is unbounded and cannot overflow.
 - `a` - Increment the value at the memory pointer, wrapping to 0 on overflow.
-- `c` - If the value at memory address `0` is 0, write the value at the memory pointer to output. If the value at memory address `0` is 1, read the value at the memory pointer from output (0 for EOF). Otherwise, do nothing.
+- `c` - If the value at memory address `0` is 0, write the value at the memory pointer to output. If the value at memory address `0` is 1, read the value at the memory pointer from input (0 for EOF). Otherwise, do nothing.
 - `k` - Decrement the memory pointer, saturating at 0.
 - `b` - Loop start, used in conjunction with loop end.
 - `d` - Loop end. If value at the memory pointer is 0, continue execution. Otherwise, move the instruction pointer back to the matching loop start.
